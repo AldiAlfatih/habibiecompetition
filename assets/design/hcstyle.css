@@ -1,0 +1,155 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to left, #e7c472, #c5d0b0,#9abcc5, #c5d0b0);
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1130ff;
+        padding: 10px 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+/* Section Styles */
+#announcements {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#announcements h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1130ff;
+    text-align: center;
+}
+
+.announcement-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #1130ff;
+    border-radius: 5px;
+}
+
+.announcement-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.announcement-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #41727c;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Dark Mode Styles */
+.darkmode {
+    background-color: #333;
+    color: #fff;
+}
+
+.darkmode header {
+    background-color: #000;
+}
+
+.darkmode #announcements {
+    background-color: #444;
+    color: #fff;
+}
+
+.darkmode .announcement-item {
+    background-color: #555;
+    border-left-color: #ffcc00;
+}
+
+.darkmode footer {
+    background-color: #000;
+}
